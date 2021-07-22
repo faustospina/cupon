@@ -19,7 +19,7 @@ public class CouponController {
 
 
     @PostMapping(path = "/coupon", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> isMutant(@RequestBody ItemsInOut item) throws CouponBusinessException {
+    public ResponseEntity<?> validateCoupon(@RequestBody ItemsInOut item) throws CouponBusinessException {
         try {
             return new ResponseEntity<>(couponService.getItems(item), HttpStatus.OK);
         } catch (CouponBusinessException c) {
