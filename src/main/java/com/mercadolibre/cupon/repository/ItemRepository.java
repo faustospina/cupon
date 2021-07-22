@@ -6,9 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface CuponRepository extends CrudRepository<ItemEntity,String> {
+public interface ItemRepository extends CrudRepository<ItemEntity,String> {
 
-    List<ItemEntity> getCuponEntitiesByItemIdIn(List<String> items);
+    List<ItemEntity> getItemEntityByItemIdIn(List<String> items);
 
     ItemEntity getById(String id);
 

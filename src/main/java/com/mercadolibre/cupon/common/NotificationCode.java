@@ -3,7 +3,9 @@ package com.mercadolibre.cupon.common;
 import org.springframework.http.HttpStatus;
 
 public enum NotificationCode {
-    NOT_FOUND_ENTITY("Not found entity by id", HttpStatus.FORBIDDEN);
+    NOT_FOUND_ENTITY("Not found entity by id", HttpStatus.FORBIDDEN),
+    INSUFFICIENT_AMOUNT("Insufficient amount available", HttpStatus.FORBIDDEN);
+
 
 
     private String description;
