@@ -10,6 +10,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * clase que recibe las peticiones REST
+ */
 @RestController
 @RequiredArgsConstructor
 public class CouponController {
@@ -17,7 +20,11 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
-
+    /**
+     * @param item
+     * @return items validados por el valor del cupon
+     * @throws CouponBusinessException
+     */
     @PostMapping(path = "/coupon", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> validateCoupon(@RequestBody ItemsInOut item) throws CouponBusinessException {
         try {
@@ -28,8 +35,13 @@ public class CouponController {
 
     }
 
+    /**
+     * @param item_id
+     * @return busca por id el dto en la base de datos
+     * @throws CouponBusinessException
+     */
     @GetMapping(path = "/items/{item_id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getItem(@PathVariable String item_id){
+    public ResponseEntity<?> getItem(@PathVariable String item_id) throws CouponBusinessException {
         try {
             return new ResponseEntity<>(couponService.getItem(item_id), HttpStatus.OK);
         } catch (CouponBusinessException c) {
@@ -37,8 +49,6 @@ public class CouponController {
         }
 
     }
-
-
 
 
 }
