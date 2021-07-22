@@ -6,7 +6,7 @@ un proyecto que identifica el monto necesario para distribuir en cupones
 
 	1 verificar su version del jdk en su ambiente local
 	2 para esta version del jdk es la version 11 de amazon correto https://corretto.aws/downloads/latest/amazon-corretto-11-x64-windows-jdk.zip
-	2 descargar el proyecto cupon de la rama dev
+	2 descargar el proyecto cupon de la rama prod
 	
 # docker y base de datos
 	
