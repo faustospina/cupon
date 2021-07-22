@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "2d49a2ab-386f-4ad5-be94-1ce2bebb7fb9",
+		"name": "coupon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "devp/coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        \"MLA1\",\r\n        \"MLA2\",\r\n        \"MLA3\",\r\n        \"MLA4\",\r\n        \"MLA5\"\r\n    ],\r\n    \"amount\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/coupon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prod/coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        \"MLA1\",\r\n        \"MLA2\",\r\n        \"MLA3\",\r\n        \"MLA4\",\r\n        \"MLA5\"\r\n    ],\r\n    \"amount\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.16.169.188:8085/coupon",
+					"protocol": "http",
+					"host": [
+						"3",
+						"16",
+						"169",
+						"188"
+					],
+					"port": "8085",
+					"path": [
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "devp/items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/items/MLA1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"items",
+						"MLA1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prod/items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://3.16.169.188:8085/items/MLA7",
+					"protocol": "http",
+					"host": [
+						"3",
+						"16",
+						"169",
+						"188"
+					],
+					"port": "8085",
+					"path": [
+						"items",
+						"MLA7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
