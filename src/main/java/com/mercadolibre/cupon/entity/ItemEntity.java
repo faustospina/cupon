@@ -1,7 +1,5 @@
 package com.mercadolibre.cupon.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,9 +11,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "item")
 public class ItemEntity implements Serializable {
 
